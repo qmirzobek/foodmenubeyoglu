@@ -10,14 +10,54 @@ var foodList=[
 var foodSecList=[
     [
         ['Salatlar'],
-        ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
-        ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
-        ['manti.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
-        ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
-        ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
-        ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"]
+        ['image.png',"BEY OGLU Salat","36.000","4.8","15","365","Lorem ipsum"],
+        ['image.png',"Tulum","41.000","4.8","15","1024","Lorem ipsum"],
+        ['manti.png',"Mevsim","38.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"n salat","25.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Smak","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Mujskoy kapriz","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Amerikacha salat","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Yaponcha salat","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Sezar","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Frasuzcha salat","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Salat poko","38.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Chi kayte","29.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Jajik","26.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Myasli dolma","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Suzma","23.000","4.8","15","1024","Lorem ipsum"]
+    ],
+    [
+        ['Pide'],
+        ['image.png',"Myasnoy pide","58.000","4.8","15","365","Lorem ipsum"],
+        ['image.png',"Frarshli pide","41.000","4.8","15","1024","Lorem ipsum"],
+        ['manti.png',"Pishloqli pide","38.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Smeshnoy pide","58.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"BEY OGLU kapali pide","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Qovurmali kasarli pide","63.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Laxmadjun","28.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Yaponcha salat","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Sezar","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Frasuzcha salat","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Salat poko","38.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Chi kayte","29.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Jajik","26.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Myasli dolma","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Suzma","23.000","4.8","15","1024","Lorem ipsum"]
     ]
 ];
+
+var categories=document.querySelector('#categories');
+var z='<button class="indie-flower-regular" onclick="showMid()">All</button>';
+// console.log(foodSecList.length);
+for(var i=0;i<foodSecList.length;i++){
+    // console.log(foodSecList);
+    z+='<button class="indie-flower-regular" onclick="showFoodSection('+i+')">'+foodSecList[i][0][0]+'</button>';
+    // console.log(foodSecList);
+}
+// console.log(z);
+categories.innerHTML=z;
+
+
 var iFoodList=document.querySelector('#iFoodList');
 // console.log(iFoodList);
 var x=foodList.length;
@@ -83,4 +123,4 @@ var x=setInterval(function(){
         }
         im1El.innerHTML='<img src="assets/img/'+foodList[i][0]+'" alt="" onclick="showFood('+i+',-1)">';
         document.querySelector('.im2').innerHTML='<img src="assets/img/'+foodList[j][0]+'" alt="" onclick="showFood('+j+',-1)">';
-},2000);
+},3000);
