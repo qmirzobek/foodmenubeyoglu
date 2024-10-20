@@ -81,6 +81,6 @@ var x=setInterval(function(){
         if((i+1)>foodList.length){
             i=0;
         }
-        im1El.innerHTML='<img src="assets/img/'+foodList[i][0]+'" alt="">';
-        document.querySelector('.im2').innerHTML='<img src="assets/img/'+foodList[j][0]+'" alt="">';
+        im1El.innerHTML='<img src="assets/img/'+foodList[i][0]+'" alt="" onclick="showFood('+i+',-1)">';
+        document.querySelector('.im2').innerHTML='<img src="assets/img/'+foodList[j][0]+'" alt="" onclick="showFood('+j+',-1)">';
 },2000);

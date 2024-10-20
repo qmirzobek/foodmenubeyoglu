@@ -49,7 +49,9 @@
     animation: animateMenuButton;
     animation-duration: 2s;
 }
-
+button{
+    cursor: pointer;
+}
 @keyframes animateMenuButton {
     0%{
         bottom: -100px;
