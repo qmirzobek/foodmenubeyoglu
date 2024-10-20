@@ -175,7 +175,8 @@ body.hideOverflow{
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 0px ;
+    padding: 10px 0px;
+    padding-right: 10px;
     width: 100%;
     overflow-x: scroll;
     flex-wrap: none;
@@ -255,7 +256,9 @@ body.hideOverflow{
     font-size: 1.75rem;
     font-weight: 400;
     /* backdrop-filter: blur(16px); */
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
+    background-color: #ed1d1d;
+    color: #fff;
     display: flex;
     border-radius: 30px;
     padding: 10px 30px;
