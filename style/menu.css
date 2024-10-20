@@ -1,0 +1,427 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.bottomNav{
+    width: 100%;
+    background-color: #ed1d1d;
+    height: 75px;
+    position: fixed;
+    z-index: 900;
+    bottom: 0;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 2px -2px 3px 1px #333;
+    
+}
+.bottomNav .boxes{
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row!important;
+}
+
+
+/*Image animation style*/
+.sliderWrapper{
+    padding-top: 30px;
+    padding: 0px;
+
+}
+.imageSlider{
+    border-radius: 10px;
+    width: 100%;
+    height: 190px;
+    gap: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+
+}
+.imageSlider .slImg{
+    width: 90vw;
+    height: 170px;
+    /* overflow: hidden; */
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+.imageSlider img{
+    /* margin: 20px; */
+    top: 0;
+    width: 90vw!important;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    animation-timing-function: ease;
+}
+.im1 img{
+    animation: imgAnimation1 5s;
+    animation-delay: 0s;
+}
+.im2 img{
+    top: 0!important;
+    /* animation-delay: 4s; */
+    animation: imgAnimation2 4s;
+}
+.categorySection{
+    position: relative;
+    z-index: 500;
+}
+.categorySection .catName{
+    font-size: 50px;
+    padding: 0px 20px;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.categorySection .foodList{
+    display: flex;
+    /* gap: 2vw; */
+    padding: 3vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.foodCard{
+    border-radius: 10px;
+    width: 45vw;
+    padding-bottom: 10px;
+    /* height: 50vw; */
+}
+.foodCard .foodImg{
+    width: 100%;
+    height: 45vw;
+    object-fit: cover;
+    object-position: center;
+}
+.foodCard .foodImg img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 2px 2px 4px #333;
+}
+.foodCard .foodName{
+    padding: 10px 0px;
+    font-size: 1.2rem;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.Lowest{
+    z-index: 100;
+}
+.lwrapper{
+    padding: 20px;
+
+}
+.Lowest .top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+.Lowest .top .bey{
+    font-size: 2rem;
+    color: #ed1d1d;
+}
+.Lowest .top .dropDown button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #ed1d1d;
+}
+.Lowest .categorySection{
+    z-index: 100;
+}
+body.hideOverflow{
+    overflow: hidden!important;
+}
+.mid{
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    transition: right 1s;
+    overflow: auto;
+}
+.midHide{
+    right: -120vw;
+}
+.categories{
+    width: 100%;
+    overflow: auto;
+}
+.categories .wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0px ;
+    width: 100%;
+    overflow-x: scroll;
+    flex-wrap: none;
+
+}
+.wrapper::-webkit-scrollbar{
+    display: none;
+}
+.categories button{
+    border: none;
+    background-color: #ed1d1d;
+    outline: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 6px 20px;
+    border-radius: 10px;
+}
+.bottomSpace{
+    height: 100px;
+    width: 100%;
+}
+.allSections{
+    width: 100vw;
+    padding: 20px;
+    /* overflow: auto!important; */
+}
+.allSections .all{
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.allSections .sectionList{
+    width: 100%;
+    /* overflow: auto; */
+}
+.sectionList .sectionCard{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    /* padding: 0px 0px 0px 10px; */
+    padding-bottom: 10px;
+    /* box-shadow: 2px 2px 4px #333!important; */
+}
+.sectionCard .secCardImg{
+    border-radius: 10px;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 4px 4px 6px #333!important;
+
+}
+.secCardImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    z-index: 270;
+}
+.sectionName{
+    position: relative;
+    bottom: 65px;
+    left: 10px;
+    z-index: 300;
+    font-size: 1.75rem;
+    font-weight: 400;
+    /* backdrop-filter: blur(16px); */
+    background-color: aliceblue;
+    display: flex;
+    border-radius: 30px;
+    padding: 10px 30px;
+    width: min-content;
+}
+.searchSection{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    z-index: 900;
+    background-color: #fff;
+}
+.searchSection *{
+    font-size: 1.2rem;
+
+}
+.searchSection .goBack{
+    padding: 4px 12px;
+    /* border: 1px solid #000000; */
+    border: none;
+    border-radius: 10px;
+    background-color: #ed1d1d;
+    color: #fff;
+    box-shadow: 2px 3px 4px #333333;
+    /* background: transparent; */
+    outline: none;
+    /* backdrop-filter: blur(2px)!important;
+    -webkit-backdrop-filter: blur(2px); */
+    /* position: absolute;
+    top: 20px;
+    left: 20px; */
+}
+.searchSection .searchGroup{
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px #333333;
+
+}
+.searchGroup input{
+    width: 100%;
+    border-radius: 10px 0px 0px 10px;
+    padding: 4px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #ed1d1d;
+    color: #fff;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.searchGroup input::placeholder{
+    color: #fff;
+}
+.searchGroup .searchIt{
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    padding: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    background-color: #ed1d1d;
+    color: #fff;
+}
+.midFoodList{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    z-index: 500;
+    width: 100%;
+    height: 100vh;
+    transition: right 1s;
+    overflow: auto;
+}
+.midFLHide{
+    right: -120vw!important;
+}
+
+
+
+
+
+
+
+
+.ovqatSection{
+    position: relative;
+    z-index: 750;
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.ovqatSection .goSectionBack{
+    padding: 4px 16px;
+    /* border: 1px solid #000000; */
+    border: none;
+    border-radius: 10px;
+    background-color: #ed1d1d;
+    color: #fff;
+    /* background: transparent; */
+    outline: none;
+    /* backdrop-filter: blur(2px)!important;
+    -webkit-backdrop-filter: blur(2px); */
+    position: absolute;
+    font-size: 1.5rem;
+    top: 20px;
+    left: 20px;
+    z-index: 760;
+}
+.ovqatSection .foodImg{
+    width: 100%;
+    height: 100%;
+}
+.ovqatSection .foodImg img{
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+}
+.ovqatSection .foodNamePrice{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.ovqatSection .foodNamePrice .foodName{
+    font-size: 3rem;
+    font-weight: 400;
+}
+.ovqatSection .foodNamePrice .foodPrice{
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.ovqatSection .foodExtraRTE{
+    /* padding-top: 12px; */
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.ovqatSection .foodExtraRTE .foodEx .Word{
+    font-size: 1.5rem;
+    padding: 10px 0;
+    font-weight: 400;
+    line-height: 30px;
+}
+.ovqatSection .foodExtraRTE .foodEx .num{
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 21px;
+}
+.ovqatSection hr{
+    font-weight: 900;
+    border: 1px solid #000000;
+}
+.ovqatSection .fullInfo{
+    padding: 20px 10px;
+}
+.ovqatSection .fullInfo .title{
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 10px;
+}
+.upperFoodInfo{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 700;
+    transition: right 1s;
+}
+.description{
+    font-family: "Benne", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.upperFIHide{
+    right: -120vw!important;
+}
+.hideOverflow{
+    overflow: hidden!important;
+}

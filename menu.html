@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Benne&family=BhuTuka+Expanded+One&family=Gowun+Batang&family=IM+Fell+Great+Primer:ital@0;1&family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="style/wordanimation.css">
+    <link rel="stylesheet" href="style/fonts.css">
+    <title>Menu</title>
+    <style>
+        .topSpace{
+            height: 70px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Lowest section -->
+    <section class="Lowest">
+        <div class="lwrapper">
+            <div class="top">
+                <div class="bey">
+                    <div class="wordAnimation">
+                    <div class="wAWrapper">
+                        <div class="Bey gowun-batang-regular">BEY OGLU</div>
+                        <div class="don im-fell-great-primer-regular">Doner Kebab</div>
+                        <div class="isk im-fell-great-primer-regular-italic">Iskender</div>
+                    </div>
+                </div></div>
+                <div class="dropDown">
+                    <button class="button">UZ</button>
+                </div>
+            </div>
+            <div class="sliderWrapper">
+                <div class="imageSlider" id="ImgSlider">
+                    <div class="slImg im1">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="slImg im2">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="slImg im3">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="wrapper indie-flower-regular">
+                    <button class="indie-flower-regular">All</button>
+                    <button class="indie-flower-regular">Salatlar</button>
+                    <button class="indie-flower-regular">Sho'rvalar</button>
+                    <button class="indie-flower-regular">All</button>
+                </div>
+            </div>
+        </div>
+        <section class="categorySection">
+            <!-- <div class="catName">Salatlar</div> -->
+            <div class="foodList" id="iFoodList">
+                <div class="foodCard">
+                    <div class="foodImg" onclick="showFood(1,0)">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Food name</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Osh</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Osh</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Food name</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Food name</div>
+                </div>
+            </div>
+        </section>
+        <div class="bottomSpace"></div>
+
+
+    </section>
+
+    <!-- Middle section -->
+    <section class="mid midHide" id="mid">
+        <section class="searchSection">
+            <button class="goBack" onclick="showMid()">&lt;</button>
+            <div class="searchGroup">
+                <input type="text" placeholder="Search...">
+                <button class="searchIt"><i class="bi bi-search"></i></button>
+            </div>
+        </section>
+        <div class="topSpace"></div>
+        <section class="allSections">
+            <div class="all">Hammasi</div>
+            <div class="sectionList">
+                <div class="sectionCard" >
+                    <div class="secCardImg">
+                        <img src="assets/img/image.png" onclick="showFoodSection(0)" alt="">
+                    </div>
+                    <div class="sectionName" onclick="showFoodSection(0)">Salatlar</div>
+                </div>
+                <div class="sectionCard">
+                    <div class="secCardImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="sectionName">Sho'rvalar</div>
+                </div>
+                <div class="sectionCard">
+                    <div class="secCardImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="sectionName">Salatlar</div>
+                </div>
+                <div class="sectionCard">
+                    <div class="secCardImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="sectionName">Salatlar</div>
+                </div>
+            </div>
+        </section>
+        <div class="bottomSpace"></div>
+    </section>
+
+
+    <section class="midFoodList midFLHide" id="midFoodList">
+        <section class="searchSection">
+            <button class="goBack" onclick="showMidFL()">&lt;</button>
+            <div class="searchGroup">
+                <input type="text" placeholder="Search...">
+                <button class="searchIt"><i class="bi bi-search"></i></button>
+            </div>
+        </section>
+        <div class="topSpace"></div>
+        <section class="categorySection">
+            <div class="catName">Salatlar</div>
+            <div class="foodList" id="foodListEl">
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Food name</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Osh</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Osh</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Osh</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Osh</div>
+                </div>
+                <div class="foodCard">
+                    <div class="foodImg">
+                        <img src="assets/img/image.png" alt="">
+                    </div>
+                    <div class="foodName">Osh</div>
+                </div>
+            </div>
+        </section>
+        <div class="bottomSpace"></div>
+    </section>
+
+    <section class="upperFoodInfo upperFIHide" id="upperFoodInfo">
+        <section class="ovqatSection">
+            <!-- <button class="goSectionBack"><i>&lt;</i></button> -->
+            <button class="goSectionBack" onclick="showUFI()"><i>&lt;</i></button>
+
+            <div class="foodImg" id="sFoodImg">
+                <img src="assets/img/image.png" alt="">
+            </div>
+            <div class="foodNamePrice">
+                <div class="foodName" id="sFoodName">Osh</div>
+                <div class="foodPrice" id="sFoodPrice">25.000</div>
+            </div>
+            <div class="foodExtraRTE">
+                <div class="foodEx">
+                    <div class="Word">Rating</div>
+                    <div class="num"  id="sFoodRate">4.8</div>
+                </div>
+                <div class="foodEx">
+                    <div class="Word">Vaqt</div>
+                    <div class="num" id="sFoodTime">15 min</div>
+                </div>
+                <div class="foodEx">
+                    <div class="Word">kkal</div>
+                    <div class="num" id="sFoodEnergyM">1024</div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="fullInfo">
+                <div class="title">Ma'lumot</div>
+                <div class="description" id="sFoodInfoDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has</div>
+            </div>
+        <div class="bottomSpace"></div>
+
+        </section>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="bottomNav">
+        <div class="boxes">
+            <div class="icon" onclick="showMidFull()">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.5938 30C23.5744 30 21.9375 28.3211 21.9375 26.25C21.9375 24.1789 23.5744 22.5 25.5938 22.5C27.6131 22.5 29.25 24.1789 29.25 26.25C29.25 28.3211 27.6131 30 25.5938 30ZM14.625 30C12.6057 30 10.9688 28.3211 10.9688 26.25C10.9688 24.1789 12.6057 22.5 14.625 22.5C16.6443 22.5 18.2813 24.1789 18.2813 26.25C18.2813 28.3211 16.6443 30 14.625 30ZM3.65625 30C1.63696 30 0 28.3211 0 26.25C0 24.1789 1.63696 22.5 3.65625 22.5C5.67554 22.5 7.3125 24.1789 7.3125 26.25C7.3125 28.3211 5.67554 30 3.65625 30ZM25.5938 18.75C23.5744 18.75 21.9375 17.0711 21.9375 15C21.9375 12.9289 23.5744 11.25 25.5938 11.25C27.6131 11.25 29.25 12.9289 29.25 15C29.25 15.9945 28.8648 16.9483 28.1791 17.6516C27.4934 18.3549 26.5634 18.75 25.5938 18.75ZM14.625 18.75C12.6057 18.75 10.9688 17.0711 10.9688 15C10.9688 12.9289 12.6057 11.25 14.625 11.25C16.6443 11.25 18.2813 12.9289 18.2813 15C18.2813 15.9945 17.8961 16.9483 17.2103 17.6516C16.5246 18.3549 15.5946 18.75 14.625 18.75ZM3.65625 18.75C1.63696 18.75 0 17.0711 0 15C0 12.9289 1.63696 11.25 3.65625 11.25C5.67554 11.25 7.3125 12.9289 7.3125 15C7.3125 15.9945 6.9273 16.9483 6.2416 17.6516C5.55593 18.3549 4.62594 18.75 3.65625 18.75ZM25.5938 7.5C23.5744 7.5 21.9375 5.82107 21.9375 3.75C21.9375 1.67893 23.5744 0 25.5938 0C27.6131 0 29.25 1.67893 29.25 3.75C29.25 4.74456 28.8648 5.69839 28.1791 6.40164C27.4934 7.10492 26.5634 7.5 25.5938 7.5ZM14.625 7.5C12.6057 7.5 10.9688 5.82107 10.9688 3.75C10.9688 1.67893 12.6057 0 14.625 0C16.6443 0 18.2813 1.67893 18.2813 3.75C18.2813 4.74456 17.8961 5.69839 17.2103 6.40164C16.5246 7.10492 15.5946 7.5 14.625 7.5ZM3.65625 7.5C1.63696 7.5 0 5.82107 0 3.75C0 1.67893 1.63696 0 3.65625 0C5.67554 0 7.3125 1.67893 7.3125 3.75C7.3125 4.74456 6.9273 5.69839 6.2416 6.40164C5.55593 7.10492 4.62594 7.5 3.65625 7.5Z" fill="white"/>
+                    </svg>
+            </div>
+            <div class="icon" onclick="hideAll()">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 15.4728L13.9395 0.472594C14.5253 -0.157531 15.4747 -0.157531 16.0605 0.472594L30 15.4728H27V28.3859C27 29.2774 26.3284 30 25.5 30H18V18.7011H12V30H4.5C3.67158 30 3 29.2774 3 28.3859V15.4728H0Z" fill="white"/>
+                    </svg>
+            </div>
+            <div class="icon" onclick="">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 30H16.6667V20H30V30ZM13.3333 30H0V13.3333H13.3333V30ZM30 16.6667H16.6667V0H30V16.6667ZM13.3333 10H0V0H13.3333V10Z" fill="white"/>
+                    </svg>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function showMid(){
+            var midEl=document.querySelector('#mid');
+            // hideOverflow();
+            if(midEl.classList[1]=="midHide"){
+                midEl.classList.remove('midHide');
+            }else{
+                midEl.classList.add('midHide');
+            }
+        }
+        function hideOverflow(){
+            var LowestEl=document.querySelector('body');
+            if(LowestEl.classList=='hideOverflow'){
+                LowestEl.classList.remove('hideOverflow');
+            }else{
+                LowestEl.classList.add('hideOverflow');
+            }
+
+        }
+        
+        function showMidFL(){
+            var midEl=document.querySelector('#midFoodList');
+            // hideOverflow();
+            // hideMidOverflow();
+            // console.log(midEl);
+            if(midEl.classList[1]=="midFLHide"){
+                midEl.classList.remove('midFLHide');
+            }else{
+                midEl.classList.add('midFLHide');
+            }
+        }
+        function showUFI(){
+            var midEl=document.querySelector('#upperFoodInfo');
+            hideOverflow();
+            // console.log(midEl);
+            if(midEl.classList[1]=="upperFIHide"){
+                midEl.classList.remove('upperFIHide');
+            }else{
+                midEl.classList.add('upperFIHide');
+            }
+        }
+        function hideMidOverflow(){
+            var LowestEl=document.querySelector('#mid');
+            // console.log(LowestEl);
+            if(LowestEl.classList[1]=='hideOverflow'){
+                LowestEl.classList.remove('hideOverflow');
+                // console.log('Hi');
+            }else{
+                LowestEl.classList.add('hideOverflow');
+            }
+        }
+        function hideAll(){
+            var upperEl=document.querySelector('#upperFoodInfo');
+            if(upperEl.classList!="upperFIHide"){
+                upperEl.classList.add('upperFIHide');
+            }
+            var midEl=document.querySelector('#midFoodList');
+            if(midEl.classList[1]!="midFLHide"){
+                midEl.classList.add('midFLHide');
+            }
+            var midEl=document.querySelector('#mid');
+            if(midEl.classList[1]!="midHide"){
+                
+                midEl.classList.add('midHide');
+            }
+            var LowestEl=document.querySelector('#mid');
+            // console.log(LowestEl);
+            if(LowestEl.classList[1]=='hideOverflow'){
+                LowestEl.classList.remove('hideOverflow');
+                // console.log('Hi');
+            }
+            var LowestEl=document.querySelector('body');
+            if(LowestEl.classList[0]=='hideOverflow'){
+                LowestEl.classList.remove('hideOverflow');
+            }
+
+
+        }
+        function showMidFull(){
+            var upperEl=document.querySelector('#upperFoodInfo');
+            if(upperEl.classList!="upperFIHide"){
+                upperEl.classList.add('upperFIHide');
+            }
+            var midEl=document.querySelector('#midFoodList');
+            if(midEl.classList[1]!="midFLHide"){
+                midEl.classList.add('midFLHide');
+            }
+            var midEl=document.querySelector('#mid');
+            if(midEl.classList[1]=="midHide"){
+                
+                midEl.classList.remove('midHide');
+            }
+            var LowestEl=document.querySelector('#mid');
+            // console.log(LowestEl);
+            if(LowestEl.classList[1]=='hideOverflow'){
+                LowestEl.classList.remove('hideOverflow');
+                // console.log('Hi');
+            }
+            var LowestEl=document.querySelector('body');
+            if(LowestEl.classList=='hideOverflow'){
+                LowestEl.classList.remove('hideOverflow');
+            }
+        }
+
+    </script>
+    <script src="script/index.js"></script>
+</body>
+</html>

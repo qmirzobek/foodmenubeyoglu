@@ -1,0 +1,72 @@
+.gowun-batang-regular {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    .im-fell-great-primer-regular {
+    font-family: "IM Fell Great Primer", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.im-fell-great-primer-regular-italic {
+    font-family: "IM Fell Great Primer", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.wordAnimation{
+    width: 275px;
+    height: 64px;
+    overflow: hidden;
+}
+.wAWrapper{
+    top: -20px;
+    font-weight: 400;
+    font-size: 40px;
+    position: relative;
+    animation: wordAnimation1 8s infinite;
+}
+.wordAnimation .wAWrapper *{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+@keyframes wordAnimation1 {
+    0%{
+        top: -10px;
+    }
+    25%{    
+        top:-10px;
+    }
+    30%{    
+        top:-120px;
+    }
+    55%{    
+        top:-120px;
+    }
+    60%{
+        top:-200px;
+    }
+    85%{
+        top:-200px;
+    }
+    95%{
+        top:-20px;
+    }
+}
+.Bey{
+    padding: 40px 0px;
+    padding-top: 50px;
+    font-weight: 600;
+    color: #ed1d1d;
+}
+.don{
+    padding-top: 60px;
+    color: #7b9310;
+}
+.isk{
+    font-weight: 400;
+    font-size: 60px;
+    padding-top: 80px;
+}
