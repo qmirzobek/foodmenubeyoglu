@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .bottomNav{
@@ -17,6 +18,7 @@
 }
 .bottomNav .boxes{
     padding: 12px 20px;
+    padding-top: 16px;
     display: flex;
     justify-content: space-around;
     flex-direction: row!important;
@@ -74,7 +76,7 @@
     z-index: 500;
 }
 .categorySection .catName{
-    font-size: 50px;
+    font-size: 2rem;
     padding: 0px 20px;
     font-family: "Indie Flower", cursive;
     font-weight: 400;
@@ -108,6 +110,9 @@
     object-fit: cover;
     object-position: center;
     box-shadow: 2px 2px 4px #333;
+}
+.foodCard .foodImg.cont img{
+    object-fit: contain;
 }
 .foodCard .foodName{
     padding: 10px 0px;
@@ -184,19 +189,27 @@ body.hideOverflow{
 .categories .wrapper{
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 10px;
     padding: 10px 0px;
     padding-right: 10px;
     width: 100%;
     overflow-x: scroll;
-    flex-wrap: none;
+    word-break: keep-all!important;
     
 }
 .categories .wrapper *{
     letter-spacing: 3px;
+    word-break: keep-all!important;
 }
 .categories .wrapper button{
     box-shadow: 2px 3px 4px #333;
+    word-break: keep-all!important;
+    white-space: nowrap;
+}
+button span{
+    width: max-content;
+    white-space: nowrap;
 }
 .wrapper::-webkit-scrollbar{
     display: none;
@@ -211,13 +224,13 @@ body.hideOverflow{
     border-radius: 10px;
 }
 .bottomSpace{
-    height: 100px;
+    height: 60px;
     width: 100%;
 }
-.allSections{
+/* .allSections{ 
     width: 100vw;
     padding: 20px;
-    /* overflow: auto!important; */
+    /* overflow: auto!important; 
 }
 .allSections .all{
     font-size: 40px;
@@ -230,16 +243,16 @@ body.hideOverflow{
 }
 .allSections .sectionList{
     width: 100%;
-    /* overflow: auto; */
+    /* overflow: auto; 
 }
 .sectionList .sectionCard{
     position: relative;
     width: 100%;
     height: 200px;
     border-radius: 10px;
-    /* padding: 0px 0px 0px 10px; */
+    /* padding: 0px 0px 0px 10px; 
     padding-bottom: 10px;
-    /* box-shadow: 2px 2px 4px #333!important; */
+    /* box-shadow: 2px 2px 4px #333!important; 
 }
 .sectionCard .secCardImg{
     border-radius: 10px;
@@ -261,14 +274,14 @@ body.hideOverflow{
 .sectionName{
     position: relative;
     bottom: 50%;
-    /* transform: translate(0, -50%); */
+    /* transform: translate(0, -50%); 
     left: 10px;
     z-index: 300;
     font-size: 1.75rem;
     font-weight: 400;
-    /* backdrop-filter: blur(16px); */
-    /* background-color: aliceblue; */
-    /* background-color: #ed1d1d; */
+    /* backdrop-filter: blur(16px); 
+    /* background-color: aliceblue; 
+    /* background-color: #ed1d1d; 
     color: #fff;
     display: flex;
     border-radius: 30px;
@@ -278,9 +291,94 @@ body.hideOverflow{
     font-weight: 400;
     font-style: normal;
     letter-spacing: 3px;
-
-
 }
+    */
+
+    .allSections{
+        width: 100vw;
+        padding: 20px;
+    }
+    .allSections .all{
+        font-size: 40px;
+        font-weight: 400;
+        font-family: "Indie Flower", cursive;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 3px;
+    }
+    .allSections .sectionList{
+        width: 100%;
+        /* gap: 20px; */
+        /* background-color: rgb(255, 140, 0); */
+    }
+    .sectionList .sectionCard{
+        margin-bottom: 20px;
+        display: flex;
+        width: 100%!important;
+        height: 170px;
+        border-radius: 10px;
+        /* background-color: rgb(39, 184, 184); */
+        box-shadow: 2px 2px 4px #333!important;
+    }
+    .sectionCard .borName{
+        font-size: 1.4rem;
+        font-family: "Indie Flower", cursive;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 3px;
+    }
+    .sectionCard.left .borImg{
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .sectionCard.left .borImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+    }
+    .sectionCard.left .borImg.cont img{
+        object-fit: contain!important;
+    }
+    .sectionCard.left .borName{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding-right: 20px;
+        word-break: normal;
+    }
+    .sectionCard.right .borImg{
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+    .sectionCard.right .borImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+    }
+    .sectionCard.right .borImg.cont img{
+        object-fit: contain!important;
+    }
+    .sectionCard.right .borName{
+        left: 0;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding-left: 20px;
+        word-break: normal;
+    }
+
 .searchSection{
     display: flex;
     position: fixed;
@@ -376,17 +474,17 @@ body.hideOverflow{
     font-style: normal;
 }
 .ovqatSection .goSectionBack{
-    padding: 6px 20px;
+    padding: 6px 10px;
     /* border: 1px solid #000000; */
     border: none;
     border-radius: 10px;
-    background-color: #ed1d1d;
-    color: #fff;
+    /* background-color: #ed1d1d; */
+    /* color: #fff; */
     box-shadow: 2px 3px 4px #333333;
     /* background: transparent; */
     outline: none;
-    background-color: #ed1d1d;
-    color: #fff;
+    background-color: #d8d8d896;
+    color: #000000;
     /* background: transparent; */
     outline: none;
     /* backdrop-filter: blur(2px)!important;
@@ -416,8 +514,18 @@ body.hideOverflow{
     font-weight: 400;
     letter-spacing: 3px;
 }
+.ovqatSection .foodNamePrice .foodName.long{
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
 .ovqatSection .foodNamePrice .foodPrice{
     font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.ovqatSection .foodNamePrice .foodPrice.long{
+    font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 3px;
 }
