@@ -25,7 +25,7 @@
     font-weight: 400;
     font-size: 40px;
     position: relative;
-    animation: wordAnimation1 8s infinite;
+    animation: wordAnimation1 12s infinite;
 }
 .wordAnimation .wAWrapper *{
     display: flex;

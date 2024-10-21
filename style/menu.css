@@ -27,6 +27,8 @@
 .sliderWrapper{
     padding-top: 30px;
     padding: 0px;
+    display: flex;
+    justify-content: center;
 
 }
 .imageSlider{
@@ -40,7 +42,7 @@
 
 }
 .imageSlider .slImg{
-    width: 90vw;
+    width: 100%;
     height: 170px;
     /* overflow: hidden; */
     object-fit: cover;
@@ -50,7 +52,7 @@
 .imageSlider img{
     /* margin: 20px; */
     top: 0;
-    width: 90vw!important;
+    width: 95vw!important;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
@@ -119,25 +121,32 @@
     z-index: 100;
 }
 .lwrapper{
-    padding: 20px;
+    padding: 10px;
 
 }
 .Lowest .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+    /* padding-right: 10px; */
 }
 .Lowest .top .bey{
     font-size: 2rem;
+    /* font-weight: 900!important; */
+    -webkit-text-stroke: #000000 1px;
     color: #ed1d1d;
+    font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 .Lowest .top{
     position: relative;
 }
-
+.Lowest .top .dropDown{
+    /* padding-right: 10px; */
+}
 .Lowest .top .dropDown button{
-
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
