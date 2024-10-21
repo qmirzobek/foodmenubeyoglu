@@ -7,7 +7,7 @@
 .bottomNav{
     width: 100%;
     background-color: #ed1d1d;
-    height: 75px;
+    height: 55px;
     position: fixed;
     z-index: 900;
     bottom: 0;
@@ -16,7 +16,7 @@
     
 }
 .bottomNav .boxes{
-    padding: 20px 20px;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-around;
     flex-direction: row!important;
@@ -196,7 +196,7 @@ body.hideOverflow{
     background-color: #ed1d1d;
     outline: none;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 6px 20px;
     border-radius: 10px;
 }
