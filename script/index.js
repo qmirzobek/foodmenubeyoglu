@@ -2,12 +2,93 @@ var foodList=[
     ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
     ['manti.png',"Osh","29.000","4.8","15","1024","Lorem ipsum"],
     ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
-    ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
     ['manti.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
     ['image.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"],
+    ['manti.png',"Osh","25.000","4.8","15","1024","Lorem ipsum"]
 
 ];
+
+
+
+
+
+
+var i=0;
+        var imgArray=foodList;
+        var ImgSliderEl=document.querySelector('#ImgSlider');
+        var z="";
+        for(var i=0;i<imgArray.length;i++){
+            z+='<div class="slImg im'+(i+1)+'"><img src="assets/img/'+foodList[i][0]+'" alt="" onclick="showFood('+i+',-1)"></div>';
+        }
+        ImgSliderEl.innerHTML=z;
+        // var f=setInterval(function(){
+        //     ImgSliderEl.scrollTo()
+        // },2000);
+        var fPrevButtonEl=document.querySelector('.fPrevButton');
+        var fNextButtonEl=document.querySelector('.fNextButton');
+        var ImgSliderEl=document.querySelector('#ImgSlider');
+        var im1El=document.querySelector('.im1');
+        var im2EL=document.querySelector('.im2');
+        fPrevButtonEl.addEventListener('click',()=>{
+            // var fImgEl=document.querySelector('#fImg');
+            i--;
+            if(i<0){
+                i=imgArray.length-1;
+            }
+            // fImgEl.innerHTML='<img src="assets/img/'+imgArray[i]+'" alt="">';
+            im1El.innerHTML='<img src="assets/img/'+foodList[i][0]+'" alt="" onclick="showFood('+i+',-1)">';
+        });
+        fNextButtonEl.addEventListener('click',()=>{
+            var fImgEl=document.querySelector('#fImg');
+            i++;
+            if(i>=imgArray.length){
+                i=0;
+            }
+            im1El.innerHTML='<img src="assets/img/'+foodList[i][0]+'" alt="" onclick="showFood('+i+',-1)">';
+        });
+
+
+
+
+
+
 var foodSecList=[
+    [
+        ['Salatlar'],
+        ['image.png',"BEY OGLU Salat","36.000","4.8","15","365","Lorem ipsum"],
+        ['image.png',"Tulum","41.000","4.8","15","1024","Lorem ipsum"],
+        ['manti.png',"Mevsim","38.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"n salat","25.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Smak","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Mujskoy kapriz","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Amerikacha salat","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Yaponcha salat","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Sezar","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Frasuzcha salat","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Salat poko","38.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Chi kayte","29.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Jajik","26.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Myasli dolma","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Suzma","23.000","4.8","15","1024","Lorem ipsum"]
+    ],
+    [
+        ['Salatlar'],
+        ['image.png',"BEY OGLU Salat","36.000","4.8","15","365","Lorem ipsum"],
+        ['image.png',"Tulum","41.000","4.8","15","1024","Lorem ipsum"],
+        ['manti.png',"Mevsim","38.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"n salat","25.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Smak","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Mujskoy kapriz","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Amerikacha salat","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Yaponcha salat","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Sezar","45.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Frasuzcha salat","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Salat poko","38.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Chi kayte","29.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Jajik","26.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Myasli dolma","34.000","4.8","15","1024","Lorem ipsum"],
+        ['image.png',"Suzma","23.000","4.8","15","1024","Lorem ipsum"]
+    ],
     [
         ['Salatlar'],
         ['image.png',"BEY OGLU Salat","36.000","4.8","15","365","Lorem ipsum"],
@@ -111,7 +192,7 @@ var im2EL=document.querySelector('.im2');
 var i=0;
 var j=1;
 var x=setInterval(function(){
-    var im1El=document.querySelector('.im1');
+    var im1El=document.querySelector('#im1');
     var im2EL=document.querySelector('.im2');
     i++;
     j++;
@@ -123,4 +204,4 @@ var x=setInterval(function(){
         }
         im1El.innerHTML='<img src="assets/img/'+foodList[i][0]+'" alt="" onclick="showFood('+i+',-1)">';
         document.querySelector('.im2').innerHTML='<img src="assets/img/'+foodList[j][0]+'" alt="" onclick="showFood('+j+',-1)">';
-},3000);
+},4000);

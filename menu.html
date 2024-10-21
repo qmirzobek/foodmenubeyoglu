@@ -15,9 +15,52 @@
     <link rel="stylesheet" href="style/fonts.css">
     <title>Menu</title>
     <style>
+
         .topSpace{
             height: 70px;
             width: 100%;
+        }
+        .sliderWrapper{
+            position: relative;
+        }
+        .fPrevButton{
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            /* left: 10px; */
+            left: 0;
+            z-index: 200;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px;
+            height: 170px;
+            border-radius: 10px 0px 0px 10px;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 100!important;
+            /* background-color: rgba(61, 66, 67, 0.636); */
+        }
+        .fNextButton .bi, .fPrevButton .bi{
+            font-weight: 100!important;
+        }
+        .fNextButton{
+            position: absolute;
+            /* top: 50%; */
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px;
+            height: 170px;
+            border-radius: 0px 10px 10px 0px;
+            color: #fff;
+            font-size: 2rem;
+
+            /* background-color: rgba(61, 66, 67, 0.636); */
         }
     </style>
 </head>
@@ -50,7 +93,10 @@
                         <img src="assets/img/image.png" alt="">
                     </div>
                 </div>
+                <div class="fPrevButton"><i class="bi bi-chevron-left"></i></div>
+                <div class="fNextButton"><i class="bi bi-chevron-right"></i></div>
             </div>
+            
             <div class="categories">
                 <div class="wrapper indie-flower-regular" id="categories">
                     <button class="indie-flower-regular">All</button>
@@ -260,6 +306,7 @@
         </div>
     </section>
     
+    
     <script>
         function showMid(){
             var midEl=document.querySelector('#mid');
@@ -364,6 +411,50 @@
             }
         }
 
+
+
+
+        const flavoursContainer = document.querySelector("#categories");
+        const flavoursScrollWidth = flavoursContainer.scrollWidth;
+        let speed = 1;
+
+        window.addEventListener("load", () => {
+            var scrollLeftB=true;
+            var widthCounter=0
+        self.setInterval(() => {
+            // console.log(flavoursContainer.scrollLeft);
+            // console.log(flavoursContainer.scrollRight);
+            // console.log(flavoursScrollWidth);
+            if (flavoursContainer.scrollLeft < flavoursScrollWidth && scrollLeftB===true) {
+                if((widthCounter)>=(flavoursScrollWidth/2)){
+                    scrollLeftB=false;
+                    flavoursContainer.scrollRight=flavoursContainer.scrollLeft;
+                    widthCounter=0;
+                }
+                flavoursContainer.scrollTo(flavoursContainer.scrollLeft + speed, 0);
+                widthCounter+=speed;
+                // console.log(widthCounter);
+            }
+
+            
+            // else{
+            //     scrollLeftB=false;
+            //     console.log('hi');
+            // }
+            if (flavoursContainer.scrollRight < flavoursScrollWidth && scrollLeftB===false) {
+                if(flavoursContainer.scrollLeft===0){
+                    scrollLeftB=true;
+                }
+                // console.log('j');
+                flavoursContainer.scrollTo(flavoursContainer.scrollLeft - speed, 0);
+                
+            }
+            // else{
+            //     scrollLeftB=true;
+            // }
+            // console.log('hi1');
+        }, 75);
+        });
     </script>
     <script src="script/index.js"></script>
 </body>
